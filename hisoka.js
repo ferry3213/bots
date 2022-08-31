@@ -1026,7 +1026,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │.hidetag [text]
 │.everyone [text]
 │.totag [reply]
-│.antilink [on/off]
+│.antilink [on/off](Anti Share Link Grup Lain)
 │.block
 │.unblock
 │.vote [text]
