@@ -452,7 +452,7 @@ break
 	    }
             break
             //Instagram download
-if (text.includes('.Ig')){
+case '.instagram' : case'ig'
 conn.sendMessage(id, 'Silakan ulangi command dengan huruf kecil',MessageType.text, { quoted: m } );
 }
 if (text.includes('.ig')){
@@ -463,7 +463,7 @@ axios.get(`https://mhankbarbars.herokuapp.com/api/ig?url=${teks}&apiKey=${apibar
     conn.sendMessage(id, hasil ,MessageType.text, { quoted: m } );
 })
 }
-
+break
   //Facebook download
 if (text.includes('.Fb')){
 conn.sendMessage(id, 'Silakan ulangi command dengan huruf kecil',MessageType.text, { quoted: m } );
