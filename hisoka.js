@@ -1027,13 +1027,15 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │.everyone [text]
 │.totag [reply]
 │.antilink [on/off]
-│.mute [on/off]
+│.block
+│.unblock
 │.vote [text]
 │.devote
 │.upvote
 │.cekvote
 │.hapusvote
-│
+│.setppgroup
+│.editinfo
 └───────•
 
 ┌──• *Youtube  Menu*
@@ -1063,12 +1065,12 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 ┌──• *Main Menu*
 │
 │.ping
-│.owner
 │.menu / help / ?
-│.quote
-│.setppgroup
-│.anticall
-│.mute
+│.setmenu
+│
+│
+│
+│
 │
 │
 └───────•
