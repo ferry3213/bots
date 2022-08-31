@@ -607,7 +607,7 @@ break
 		m.reply('Sukses Broadcast')
             }
             break
-            case 'q': case 'quote': {
+            case 'quote': {
 		if (!m.quoted) return m.reply('Reply Pesannya!!')
 		let wokwol = await hisoka.serializeM(await m.getQuotedObj())
 		if (!wokwol.quoted) return m.reply('Pesan Yang anda reply tidak mengandung reply')
@@ -1067,6 +1067,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │.menu / help / ?
 │.quoted
 │.listonline
+│.list-chat
+│.list-grup
 │
 └───────•
 
