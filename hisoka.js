@@ -1073,7 +1073,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │.ping
 │.menu / help / ?
 │.setmenu
-│
+│.react(Replay Text + Emot)
 │
 │
 │
