@@ -452,10 +452,10 @@ break
 	    }
             break
             //Instagram download
-case '.instagram' : case'ig'
-conn.sendMessage(id, 'Silakan ulangi command dengan huruf kecil',MessageType.text, { quoted: m } );
+
+
 }
-if (text.includes('.ig')){
+case : 'ig' : {
 const teks = text.replace(/.ig /, "")
 axios.get(`https://mhankbarbars.herokuapp.com/api/ig?url=${teks}&apiKey=${apibarbar}`).then((res) => {
 	conn.sendMessage(id, '[ WAIT ] Mendownload...⏳ silahkan tunggu', MessageType.text, { quoted: m } )
@@ -465,10 +465,10 @@ axios.get(`https://mhankbarbars.herokuapp.com/api/ig?url=${teks}&apiKey=${apibar
 }
 break
   //Facebook download
-if (text.includes('.Fb')){
-conn.sendMessage(id, 'Silakan ulangi command dengan huruf kecil',MessageType.text, { quoted: m } );
-}
-if (text.includes('.fb')){
+
+
+
+case : 'fb' : {
 const teks = text.replace(/.fb /, "")
 axios.get(`https://api.vhtear.com/fbdl?link=${teks}&apikey=${apivhtear}`).then((res) => {
 	conn.sendMessage(id, '[ WAIT ] Mendownload...⏳ silahkan tunggu', MessageType.text, { quoted: m } )
@@ -477,11 +477,11 @@ axios.get(`https://api.vhtear.com/fbdl?link=${teks}&apikey=${apivhtear}`).then((
 })
 }
 
-  //Twitter download
-if (text.includes('.Twt')){
-conn.sendMessage(id, 'Silakan ulangi command dengan huruf kecil',MessageType.text, { quoted: m } );
+
+break
+
 }
-if (text.includes('.twt')){
+case : 'twt' : {
 const teks = text.replace(/.twt /, "")
 axios.get(`https://mhankbarbars.herokuapp.com/api/twit?url=${teks}&apiKey=${apibarbar}`).then((res) => {
 	conn.sendMessage(id, '[ WAIT ] Mendownload⏳ silahkan tunggu', MessageType.text, { quoted: m } )
@@ -491,10 +491,10 @@ axios.get(`https://mhankbarbars.herokuapp.com/api/twit?url=${teks}&apiKey=${apib
 }
 
   //Pencarian wiki
-if (text.includes('.Wiki')){
-conn.sendMessage(id, 'Silakan ulangi command dengan huruf kecil',MessageType.text, { quoted: m } );
-}
-if (text.includes(".wiki")){
+
+break
+
+case : 'wiki' : {
 const teks = text.replace(/.wiki /, "")
 axios.get(`https://alfians-api.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
 	conn.sendMessage(id, '[ WAIT ] Searching...⏳ silahkan tunggu', MessageType.text, { quoted: m } )
@@ -504,10 +504,10 @@ axios.get(`https://alfians-api.herokuapp.com/api/wiki?q=${teks}`).then((res) => 
 }
 
   //Jadwan sholat daerah
-if (text.includes('.Sholat')){
-conn.sendMessage(id, 'Silakan ulangi command dengan huruf kecil',MessageType.text, { quoted: m } );
+break
+
 }
-if (text.includes(".sholat")){
+case : 'sholat' : {
   const teks = text.replace(/.sholat /, "")
   axios.get(`https://tobz-api.herokuapp.com/api/jadwalshalat?q=${teks}`).then ((res) =>{
   conn.sendMessage(id, '[ WAIT ] Menampilkan jadwal sholat⏳ silahkan tunggu', MessageType.text, { quoted: m } )
@@ -517,13 +517,13 @@ if (text.includes(".sholat")){
         }
 //Stalker instagram
 
-if (text.includes('.Stalk')){
 
-conn.sendMessage(id, 'Silakan ulangi command dengan huruf kecil',MessageType.text, { quoted: m } );
+
+
 
 }
 
-if (text.includes(".stalk")){
+case : 'stalk' : {
 
 const sons = text.replace(/.stalk /, "")
 
@@ -546,13 +546,13 @@ axios.get(`https://alfians-api.herokuapp.com/api/stalk?username=${sons}`).then (
     })
 //Pencarian chord gitar
 
-if (text.includes('.Chord')){
 
-conn.sendMessage(id, 'Silakan ulangi command dengan huruf kecil',MessageType.text, { quoted: m } );
+
+break
 
 }
 
-if (text.includes(".chord")){
+case : 'chord' :{
 
 const teks = text.replace(/.chord /, "")
 
