@@ -456,7 +456,7 @@ break
 
 }
 case : 'ig' : {
-const teks = text.replace(/.ig /, "")
+
 axios.get(`https://mhankbarbars.herokuapp.com/api/ig?url=${teks}&apiKey=${apibarbar}`).then((res) => {
 	conn.sendMessage(id, '[ WAIT ] Mendownload...⏳ silahkan tunggu', MessageType.text, { quoted: m } )
     let hasil = `Klik link dan download hasilnya!\n*Link* : ${res.data.result}`;
@@ -469,7 +469,7 @@ break
 
 
 case : 'fb' : {
-const teks = text.replace(/.fb /, "")
+
 axios.get(`https://api.vhtear.com/fbdl?link=${teks}&apikey=${apivhtear}`).then((res) => {
 	conn.sendMessage(id, '[ WAIT ] Mendownload...⏳ silahkan tunggu', MessageType.text, { quoted: m } )
     let hasil = `Klik link dan download hasilnya!\n*Judul* : ${res.data.title}\n*Link* : ${res.data.result}`;
@@ -482,7 +482,7 @@ break
 
 }
 case : 'twt' : {
-const teks = text.replace(/.twt /, "")
+
 axios.get(`https://mhankbarbars.herokuapp.com/api/twit?url=${teks}&apiKey=${apibarbar}`).then((res) => {
 	conn.sendMessage(id, '[ WAIT ] Mendownload⏳ silahkan tunggu', MessageType.text, { quoted: m } )
     let hasil = `Klik link dan download hasilnya!\n*Link* : ${res.data.result}\n*Judul* : ${res.data.title}\n${res.data.quote}`;
@@ -495,7 +495,7 @@ axios.get(`https://mhankbarbars.herokuapp.com/api/twit?url=${teks}&apiKey=${apib
 break
 
 case : 'wiki' : {
-const teks = text.replace(/.wiki /, "")
+
 axios.get(`https://alfians-api.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
 	conn.sendMessage(id, '[ WAIT ] Searching...⏳ silahkan tunggu', MessageType.text, { quoted: m } )
     let hasil = `Menurut Wikipedia:\n\n${res.data.result}`;
@@ -508,7 +508,7 @@ break
 
 }
 case : 'sholat' : {
-  const teks = text.replace(/.sholat /, "")
+
   axios.get(`https://tobz-api.herokuapp.com/api/jadwalshalat?q=${teks}`).then ((res) =>{
   conn.sendMessage(id, '[ WAIT ] Menampilkan jadwal sholat⏳ silahkan tunggu', MessageType.text, { quoted: m } )
   let hasil = `Jadwal sholat di ${teks} hari ini adalah\n\n*Imsyak* : ${res.data.imsyak} WIB\n*Subuh* : ${res.data.subuh} WIB\n*Dzuhur* : ${res.data.dzuhur} WIB\n*Ashar* : ${res.data.ashar} WIB\n*Maghrib* : ${res.data.maghrib} WIB\n*Isya* : ${res.data.isha} WIB`;
@@ -525,7 +525,7 @@ case : 'sholat' : {
 
 case : 'stalk' : {
 
-const sons = text.replace(/.stalk /, "")
+
 
 axios.get(`https://alfians-api.herokuapp.com/api/stalk?username=${sons}`).then ((res) =>{
 
@@ -554,7 +554,7 @@ break
 
 case : 'chord' :{
 
-const teks = text.replace(/.chord /, "")
+
 
 axios.get(`https://arugaz.herokuapp.com/api/chord?q=${teks}`).then((res) => {
 
