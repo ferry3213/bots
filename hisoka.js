@@ -450,125 +450,15 @@ break
             delete vote[m.chat]
             m.reply('Berhasil Menghapus Sesi Vote Di Grup Ini')
 	    }
-            break
-            //Instagram download
+         
+            
 
 
-}
-case : 'ig' : {
-
-axios.get(`https://mhankbarbars.herokuapp.com/api/ig?url=${teks}&apiKey=${apibarbar}`).then((res) => {
-	conn.sendMessage(id, '[ WAIT ] Mendownload...⏳ silahkan tunggu', MessageType.text, { quoted: m } )
-    let hasil = `Klik link dan download hasilnya!\n*Link* : ${res.data.result}`;
-    conn.sendMessage(id, hasil ,MessageType.text, { quoted: m } );
-})
-}
-break
-  //Facebook download
+   
 
 
 
-case : 'fb' : {
-
-axios.get(`https://api.vhtear.com/fbdl?link=${teks}&apikey=${apivhtear}`).then((res) => {
-	conn.sendMessage(id, '[ WAIT ] Mendownload...⏳ silahkan tunggu', MessageType.text, { quoted: m } )
-    let hasil = `Klik link dan download hasilnya!\n*Judul* : ${res.data.title}\n*Link* : ${res.data.result}`;
-    conn.sendMessage(id, hasil ,MessageType.text, { quoted: m } );
-})
-}
-
-
-break
-
-}
-case : 'twt' : {
-
-axios.get(`https://mhankbarbars.herokuapp.com/api/twit?url=${teks}&apiKey=${apibarbar}`).then((res) => {
-	conn.sendMessage(id, '[ WAIT ] Mendownload⏳ silahkan tunggu', MessageType.text, { quoted: m } )
-    let hasil = `Klik link dan download hasilnya!\n*Link* : ${res.data.result}\n*Judul* : ${res.data.title}\n${res.data.quote}`;
-    conn.sendMessage(id, hasil ,MessageType.text, { quoted: m } );
-})
-}
-
-  //Pencarian wiki
-
-break
-
-case : 'wiki' : {
-
-axios.get(`https://alfians-api.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
-	conn.sendMessage(id, '[ WAIT ] Searching...⏳ silahkan tunggu', MessageType.text, { quoted: m } )
-    let hasil = `Menurut Wikipedia:\n\n${res.data.result}`;
-    conn.sendMessage(id, hasil ,MessageType.text, { quoted: m } );
-})
-}
-
-  //Jadwan sholat daerah
-break
-
-}
-case : 'sholat' : {
-
-  axios.get(`https://tobz-api.herokuapp.com/api/jadwalshalat?q=${teks}`).then ((res) =>{
-  conn.sendMessage(id, '[ WAIT ] Menampilkan jadwal sholat⏳ silahkan tunggu', MessageType.text, { quoted: m } )
-  let hasil = `Jadwal sholat di ${teks} hari ini adalah\n\n*Imsyak* : ${res.data.imsyak} WIB\n*Subuh* : ${res.data.subuh} WIB\n*Dzuhur* : ${res.data.dzuhur} WIB\n*Ashar* : ${res.data.ashar} WIB\n*Maghrib* : ${res.data.maghrib} WIB\n*Isya* : ${res.data.isha} WIB`;
-  conn.sendMessage(id, hasil, MessageType.text, { quoted: m } );
-})
-        }
-//Stalker instagram
-
-
-
-
-
-}
-
-case : 'stalk' : {
-
-
-
-axios.get(`https://alfians-api.herokuapp.com/api/stalk?username=${sons}`).then ((res) =>{
-
-    imageToBase64(res.data.Profile_pic)
-
-        .then(
-
-    (ress) => {
-
-    var buf = Buffer.from(ress, 'base64')
-
-    conn.sendMessage(id, '[ WAIT ] Stalking⏳ silahkan tunggu', MessageType.text, { quoted: m } )
-
-    let hasil = `*>Username* : ${res.data.Username}\n*>Nama* : ${res.data.Name}\n*>Follower* : ${res.data.Jumlah_Followers}\n*>Following* : ${res.data.Jumlah_Following}\n*>Jumlah Post* : ${res.data.Jumlah_Post}\n*>Bio* : ${res.data.Biodata}\n\nFollow : https://www.instagram.com/agus.alnsyh71/`;
-
-    conn.sendMessage(id, buf ,MessageType.image, { caption: hasil, quoted: m } );
-
-    })
-//Pencarian chord gitar
-
-
-
-break
-
-}
-
-case : 'chord' :{
-
-
-
-axios.get(`https://arugaz.herokuapp.com/api/chord?q=${teks}`).then((res) => {
-
-    conn.sendMessage(id, '[ WAIT ] Searching chord lagu⏳ silahkan tunggu', MessageType.text, { quoted: m } )
-
-    let hasil = `*Judul* : ${teks}\n*chord* : ${res.data.result}`;
-
-    conn.sendMessage(id, hasil ,MessageType.text, { quoted: m } );
-
-})
-
-
-
-            }
+            
             break
             case 'editinfo': {
                 if (!m.isGroup) throw mess.group
@@ -1185,13 +1075,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │.ping
 │.menu / help / ?
 │.setmenu
-│.ig  (download vidio)
-│.fb  (download vidio)
-│.twt (download vidio)
-│.wiki (pencarian melalui wikipedia)
-│.stalker (Instagram)
-│.chord (pencarian chord gitar)
-│.sholat (jadwal waktu sholat daerah)
+│
 │
 │
 │
